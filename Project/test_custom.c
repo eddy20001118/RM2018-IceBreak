@@ -24,8 +24,9 @@ int PositionD[] = {3, 3, 3};
 void test_moto_control(void)
 {
    //LED控制函数
-	 write_led_io(LED_IO2,LED_ON);	
-	
+	 for(int i=0;i<12;i++){
+	 write_led_io(i,LED_ON);	
+	 }
    //电机的速度给定
    test_moto_position[0] = rc.ch2 / RC_MAX_VALUE * ANGLE_MAX_VALUE[1]; //moving
    test_moto_position[1] = rc.ch1 / RC_MAX_VALUE * ANGLE_MAX_VALUE[0]; //rolling
